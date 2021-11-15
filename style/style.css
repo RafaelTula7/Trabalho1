@@ -1,3 +1,5 @@
+/*Resetando as predefinições do Browser*/
+
 * {
     padding: 0;
     margin: 0;
@@ -16,7 +18,7 @@
   header {
     background-color: #fbe8d3;
   }
-  
+  /*Adicionando estilo ao menu*/
   header .menu-nav {
     display: flex;
     justify-content: space-between;
@@ -26,6 +28,7 @@
     background-color: #fbe8d3;
   }
   
+  /*Estilizando o local da logo*/
   .logo {
     font-size: 4rem;
     color: #283c63;
@@ -38,6 +41,7 @@
     margin-right: 60px;
   }
   
+  /*Estilizando os Hiperlinks do Menu*/
   .menu-nav ul li a {
     color: #283c63;
     font-size: 2rem;
@@ -46,10 +50,12 @@
     padding: 20px;
   }
   
+  /*Adicionando efeito ao passar o cursor por cima dos links*/
   .menu-nav ul li a:hover {
     color: #f85f73;
   }
   
+  /*Estilizando a seção inicial do site*/
   #inicio {
     background-color: #f85f73;
     width: 100vw;
@@ -60,6 +66,7 @@
     overflow-x: hidden;
   }
   
+  /*Estilizando separadamente as partes da frase de efeito para manter a formatação desejada*/
   .frase {
     display: flex;
     justify-content: space-between;
@@ -97,21 +104,23 @@
     font-weight: bold;
   }
   
+  /*Efeito no cursor  na palavra de impacto*/
   .frase-continua a:hover {
     color: #283c63;
   }
   
+  /*Ajustando a Posição da imagem da pagina inicial*/
   .img-inicio {
     margin-right: 120px;
   }
-
+  /*Estilizando a Area de produtos que engloba os cards*/
   #produtos {
       background-color: #f5f5f5;
       width: 100vw;
       overflow-x: hidden;
       padding-bottom: 30px;
   }
-  
+  /*Padronizando os Titulos de seção*/
   .titulo-secao{
     text-align: center;
     font-size: 4rem;
@@ -120,6 +129,7 @@
     color: #283c63;
     padding-top: 20px;
   }
+  /*Versão Branca do titulo de seção*/
   .titulo-secao-branco{
     text-align: center;
     font-size: 4rem;
@@ -128,13 +138,14 @@
     color: #fff;
     padding-top: 20px;
   }
-  
+  /*Estrutura que comporta os cards de produtos em colunas*/
   .cards-column {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
   }
-
+  
+  /*Estrutura para organizar os cards em linha*/
   .cards {
       display: flex;
       justify-content: space-around;
@@ -142,6 +153,8 @@
       padding-top: 60px;
       overflow-x: hidden;
   }
+
+  /*Estilizando o card*/
   .card-container {
       display: flex;
       height: 230px;
@@ -150,20 +163,20 @@
       background-color: #fbe8d3;
       border-radius: 10px;
   }
-
+  /*Ajustando o posicionamento da imagem para o card*/
   .img-card {
       height: 200px;
       width: 200px;
       border-radius: 10px;
   }
-
+/*Descrição do Card*/
   .card-title {
       font-size: 1.4rem;
       color: #283c63;
       text-align: center;
   }
 
-
+/*Estilizando Seção de preços*/
   .precos {
     display: flex;
     justify-content: center;
@@ -171,10 +184,13 @@
     background-color: #fff;
     height: 40vh;
 }
+/*Estilizando a div para ajustar o posicionamento da tabela*/
   .tabela {
     display: flex;
     justify-content: center;
   }
+
+  /*Estilizando a Tabela*/
   table {
     margin-top: 60px;
   }
@@ -210,7 +226,7 @@
   .sabor-table {
     background-color: #928A97;
   }
-  
+  /*Estilizando seção de simulação de compras*/
   #compras {
       background-color: #283c63;
       height: 30vh;
@@ -219,7 +235,7 @@
   #compras p {
       color: #fff;
   }
-
+  /*Estilizando seção que integra o Js para apresentar supostos pedidos*/
   .escolhas {
       background-color: #f85f73;
       height: 200px;
@@ -227,12 +243,12 @@
 
   }
 
-
+  /*Personalização do Botão*/
   button {
       background-color: #fbe8d3;
       color: #f85f73;
   }
-
+  /*Estilizando seção de explicação do Trabalho*/
   #explica {
       background-color: #f5f5f5;
       height: 15vw;   
@@ -246,7 +262,7 @@
   }
 
 
-
+/*Abaixo estão todas as edições anteriores adaptadas para obter melhor responsividade*/
 
 
   @media (max-width: 999px) {
@@ -255,6 +271,13 @@
     }  
     header nav ul li{
           display: none;
+    }
+
+    .logo {
+      font-size: 2rem;
+      color: #283c63;
+      font-weight: bold;
+      margin-left: 60px;
     }
 
     #inicio img{
@@ -322,7 +345,7 @@
 
     .titulo-secao{
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         font-weight: bold;
         align-items: center;
         color: #283c63;
@@ -330,7 +353,7 @@
       }
       .titulo-secao-branco{
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         font-weight: bold;
         align-items: center;
         color: #fff;
@@ -352,21 +375,21 @@
       }
       .card-container {
           display: flex;
-          height: 150px;
-          width: 120px;
+          height: 100px;
+          width: 80px;
           flex-direction: column;
           background-color: #fbe8d3;
           border-radius: 10px;
       }
     
       .img-card {
-          height: 120px;
-          width: 120px;
+          height: 80px;
+          width: 80px;
           border-radius: 10px;
       }
     
       .card-title {
-          font-size: 1.1rem;
+          font-size: 0.6rem;
           color: #283c63;
           text-align: center;
       }
@@ -445,7 +468,6 @@
     
       #explica {
           background-color: #f5f5f5;
-          height: 15vw;   
       }
     
       #explica .texto-explica {
@@ -453,6 +475,7 @@
           font-weight: 400;
           font-size: 1.5rem;
           padding-top: 30px;
+          background-color: #f5f5f5;
       }
     
 
