@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Sorveteria</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Adicionando o estilo CSS à pagina HTML -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Adicionando a Fonte Rubik, da api do Google ao meu projeto para ser utilizada como fonte padrão-->
+  </head>
+  <body>
+    <header>
+      <nav class="menu-nav">
+        <a href="#" class="logo">LOGO</a>
+        <ul>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#compras">Compras</a></li>
+          <li><a href="#explica">Explicação</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="inicio">
+      <div class="frase">
+        <h1>Os Melhores Sorvetes e</h1>
+        <h2>Picolés</h2>
+        <div class="frase-continua">
+          <p>Você Encontra</p>
+          <a href="#">Aqui</a>
+        </div>
+      </div>
+      <img src="imgs/svt.png" alt="Sorvete de Chocolate" class="img-inicio" />
+    </div>
+    <div id="produtos">
+      <p class="titulo-secao">Produtos</p>
+      <div class="cards-column">
+        <div class="cards">
+          <div class="card-container">
+            <img src="imgs/chocolate.jpg" alt="" class="img-card" />
+            <p class="card-title">Sorvete de Chocolate</p>
+          </div>
+          <div class="card-container">
+            <img src="imgs/morango.jpg" alt="" class="img-card" />
+            <p class="card-title">Sorvete de Morango</p>
+          </div>
+          <div class="card-container">
+            <img src="imgs/baunilha.jpg" alt="" class="img-card" />
+            <p class="card-title">Sorvete de Baunilha</p>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-container">
+            <img src="imgs/picoleChoco.jpg" alt="" class="img-card" />
+            <p class="card-title">Picolé de Chocolate</p>
+          </div>
+          <div class="card-container">
+            <img src="imgs/picoleMorango.jpg" alt="" class="img-card" />
+            <p class="card-title">Picolé de Morango</p>
+          </div>
+          <div class="card-container">
+            <img src="imgs/picoléBaunilha.jpg" alt="" class="img-card" />
+            <p class="card-title">Picolé de Baunilha</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="precos">
+      <p class="titulo-secao">Tabela de Preços</p>
+      <div class="tabela">
+        <table border="1px" cellpadding="5px" cellspacing="0">
+          <colgroup span="4"></colgroup>
+          <tr class="primeira-linha-table">
+            <th>Sabores</th>
+            <th>Picolé</th>
+            <th>Sorvete</th>
+          </tr>
+          <tr class="linha-table">
+            <td class="sabor-table">Chocolate</td>
+            <td>2,00R$</td>
+            <td>4,00R$</td>
+          </tr>
+          <tr class="linha-table">
+            <td class="sabor-table">Morango</td>
+            <td>2,00R$</td>
+            <td>4,00R$</td>
+          </tr>
+          <tr class="linha-table">
+            <td class="sabor-table">Baunilha</td>
+            <td>2,00R$</td>
+            <td>4,00R$</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="compras">
+      <p class="titulo-secao-branco">Pedidos</p>
+      <div class="escolhas">
+          <p class="titulo-secao">Produto Escolhido</p>
+          <div id="entradas">
+              <div id="ent">
+                <div>
+                  <label for="edtTipo">Tipo</label>
+                  <input id="edtTipo" type="text" placeholder="Digite o Tipo" />
+                </div>
+                <div>
+                  <label for="edtSabor">Sabor</label>
+                  <input id="edtSabor" type="text" placeholder="Digite o Sabor" />
+                </div>
+                <div>
+                  <button id="btnCalculo" type="button" onclick="pedido()">
+                    Enviar
+                  </button>
+                </div>
+              </div>
+              <div id="areaRespCalculo">
+                <p>Pedido:</p>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div id="explica">
+      <p class="titulo-secao">Explicação</p>
+      <p class="texto-explica">
+        O intuito deste projeto prático de HTML, CSS e JS é aplicar os conceitos
+        aprendidos em aula para criação de uma interface básica para apresentar
+        algumas das possibilidades que essas linguagens Web proporcionam para
+        realização dos mais diversos tipos de projetos.
+      </p>
+    </div>
+    
+    <script src="js/pedido.js"></script>
+  </body>
+</html>
