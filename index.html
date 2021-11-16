@@ -1,4 +1,6 @@
- <!-- Rafael Claudio Ferreira Tula - 2018010477 -->
+<!-- Rafael Claudio Ferreira Tula - 2018010477 -->
+<!-- Referências: W3shools e Devdocs  -->
+<!-- Mockup // Ideia inicial: https://www.figma.com/file/bsB2CFDpIMxTwJbAM92EPQ/Projeto-de-Web?node-id=0%3A1  -->
 
 
 <!DOCTYPE html>
@@ -110,28 +112,26 @@
     <!-- Criando a div que utiliza o Js para apresentar a entrada do usuario no site-->
     <div id="compras">
       <p class="titulo-secao-branco">Pedidos</p>
-      <div class="escolhas">
-          <p class="titulo-secao">Produto Escolhido</p>
-          <div id="entradas">
-              <div id="ent">
-                <div>
-                  <label for="edtTipo">Tipo</label>
-                  <input id="edtTipo" type="text" placeholder="Digite o Tipo" />
-                </div>
-                <div>
-                  <label for="edtSabor">Sabor</label>
-                  <input id="edtSabor" type="text" placeholder="Digite o Sabor" />
-                </div>
-                <div>
-                  <button id="btnCalculo" type="button" onclick="pedido()">
-                    Enviar
-                  </button>
-                </div>
-              </div>
-              <div id="areaResp">
-                <p>Pedido:</p>
-              </div>
-            </div>
+
+      <div id="entradas">
+        <div id="ent">
+          <div>
+            <label for="edtTipo">Tipo</label>
+            <input id="edtTipo" type="text" placeholder="Digite o Tipo" />
+          </div>
+          <div>
+            <label for="edtSabor">Sabor</label>
+            <input id="edtSabor" type="text" placeholder="Digite o Sabor" />
+          </div>
+          <div>
+            <button id="btnCalculo" type="button" onclick="pedido()">
+              Enviar
+            </button>
+          </div>
+        </div>
+        <div id="areaResp">
+          <p>Pedido:</p>
+        </div>
       </div>
     </div>
     <!-- Criando a parte de Explicações requisitada no roteiro do trabalho-->
@@ -141,7 +141,14 @@
         O intuito deste projeto prático de HTML, CSS e JS é aplicar os conceitos
         aprendidos em aula para criação de uma interface básica para apresentar
         algumas das possibilidades que essas linguagens Web proporcionam para
-        realização dos mais diversos tipos de projetos.
+        realização dos mais diversos tipos de projetos. 
+      </p>
+      <p class="texto-explica">
+        Foi escolhido como tema
+        visual para o projeto uma página simples de uma sorveteria genérica para
+        aplicar conceitos práticos de HTML e CSS, e como não é um projeto que
+        integra o sistema com o back-end foi utilizado o JS apenas para simples
+        edição do usuário que pode observar suas entradas aparecerem na tela.
       </p>
     </div>
     <!-- Adicionando o JS ao HTML-->

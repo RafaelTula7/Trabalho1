@@ -1,488 +1,551 @@
-/*Rafael Claudio Ferreira Tula - 2018010477*/
-
+/*Rafael Claudio Ferreira Tula - 2018010477*/           /* Mockup // Ideia inicial: https://www.figma.com/file/bsB2CFDpIMxTwJbAM92EPQ/Projeto-de-Web?node-id=0%3A1 */
 
 /*Resetando as predefinições do Browser*/
 
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    font-family: "Rubik", sans-serif;
-    list-style: none;
-    font-size: 12px;
-    font-weight: 400;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  list-style: none;
+  font-size: 12px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #fbe8d3;
+}
+/*Adicionando estilo ao menu*/
+header .menu-nav {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100vw;
+  align-items: center;
+  background-color: #fbe8d3;
+}
+
+/*Estilizando o local da logo*/
+.logo {
+  font-size: 4rem;
+  color: #283c63;
+  font-weight: bold;
+  margin-left: 60px;
+}
+
+.menu-nav ul {
+  display: flex;
+  margin-right: 60px;
+}
+
+/*Estilizando os Hiperlinks do Menu*/
+.menu-nav ul li a {
+  color: #283c63;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+/*Adicionando efeito ao passar o cursor por cima dos links*/
+.menu-nav ul li a:hover {
+  color: #f85f73;
+}
+
+/*Estilizando a seção inicial do site*/
+#inicio {
+  background-color: #f85f73;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/*Estilizando separadamente as partes da frase de efeito para manter a formatação desejada*/
+.frase {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  letter-spacing: 2px;
+  margin-left: 300px;
+}
+
+#inicio h1 {
+  color: #fff;
+  font-size: 4.5rem;
+  font-weight: 500;
+}
+
+#inicio h2 {
+  color: #fff;
+  font-size: 4.5rem;
+}
+
+.frase-continua {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.frase-continua p {
+  color: #fff;
+  font-size: 4.5rem;
+}
+
+.frase-continua a {
+  color: #fbe8d3;
+  font-size: 5rem;
+  margin-right: 70px;
+  font-weight: bold;
+}
+
+/*Efeito no cursor  na palavra de impacto*/
+.frase-continua a:hover {
+  color: #283c63;
+}
+
+/*Ajustando a Posição da imagem da pagina inicial*/
+.img-inicio {
+  margin-right: 120px;
+}
+/*Estilizando a Area de produtos que engloba os cards*/
+#produtos {
+  background-color: #f5f5f5;
+  width: 100vw;
+  overflow-x: hidden;
+  padding-bottom: 360px;
+}
+/*Padronizando os Titulos de seção*/
+.titulo-secao {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  align-items: center;
+  color: #283c63;
+  padding-top: 20px;
+}
+/*Versão Branca do titulo de seção*/
+.titulo-secao-branco {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  align-items: center;
+  color: #fff;
+  padding-top: 20px;
+}
+/*Estrutura que comporta os cards de produtos em colunas*/
+.cards-column {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+/*Estrutura para organizar os cards em linha*/
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+
+/*Estilizando o card*/
+.card-container {
+  display: flex;
+  height: 230px;
+  width: 200px;
+  flex-direction: column;
+  background-color: #fbe8d3;
+  border-radius: 10px;
+}
+/*Ajustando o posicionamento da imagem para o card*/
+.img-card {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+/*Descrição do Card*/
+.card-title {
+  font-size: 1.4rem;
+  color: #283c63;
+  text-align: center;
+}
+
+/*Estilizando Seção de preços*/
+.precos {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  height: 40vh;
+}
+/*Estilizando a div para ajustar o posicionamento da tabela*/
+.tabela {
+  display: flex;
+  justify-content: center;
+}
+
+/*Estilizando a Tabela*/
+table {
+  margin-top: 60px;
+}
+
+table .primeira-linha-table {
+  background-color: #fbe8d3;
+}
+
+table .primeira-linha-table th {
+  font-size: 4rem;
+  color: #283c63;
+  font-weight: 600;
+}
+
+table .linha-table td {
+  font-size: 2rem;
+  color: #283c63;
+  font-weight: 400;
+}
+
+table .segunda-linha-table {
+  background-color: #fff;
+}
+
+table .terceira-linha-table {
+  background-color: #fff;
+}
+
+table .quarta-linha-table {
+  background-color: #fff;
+}
+
+.sabor-table {
+  background-color: #928a97;
+}
+/*Estilizando seção de simulação de compras*/
+#compras {
+  background-color: #283c63;
+  height: 30vh;
+}
+
+#compras p {
+  color: #fff;
+}
+/*Estilizando seção que integra o Js para apresentar supostos pedidos*/
+
+/*Personalização do Botão*/
+button {
+  background-color: #fbe8d3;
+  color: #f85f73;
+  border: none;
+  width: 60px;
+  border-radius: 30px;
+  font-size: 1.6rem;
+}
+/*Estilizando seção de explicação do Trabalho*/
+#explica {
+  background-color: #f5f5f5;
+  height: 15vw;
+}
+
+#explica .texto-explica {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.5rem;
+  padding-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-bottom: 30px;
+}
+
+#edtTipo {
+  font-size: 1.4rem;
+  width: 200px;
+}
+
+#edtSabor {
+  font-size: 1.4rem;
+  width: 200px;
+}
+
+label {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+#ent {
+  display: flex;
+  justify-content: center;
+}
+#areaResp {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+#areaResp p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/*Abaixo estão todas as edições anteriores adaptadas para obter melhor responsividade*/
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  header nav ul li {
+    display: none;
   }
 
-  body {
-      overflow-x: hidden;
-  }
-  
-  header {
-    background-color: #fbe8d3;
-  }
-  /*Adicionando estilo ao menu*/
-  header .menu-nav {
-    display: flex;
-    justify-content: space-between;
-    height: 10vh;
-    width: 100vw;
-    align-items: center;
-    background-color: #fbe8d3;
-  }
-  
-  /*Estilizando o local da logo*/
   .logo {
-    font-size: 4rem;
+    font-size: 2rem;
     color: #283c63;
     font-weight: bold;
     margin-left: 60px;
   }
-  
-  .menu-nav ul {
-    display: flex;
-    margin-right: 60px;
+
+  #inicio img {
+    height: 40%;
+    width: 60%;
   }
-  
-  /*Estilizando os Hiperlinks do Menu*/
-  .menu-nav ul li a {
-    color: #283c63;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    font-weight: 600;
-    padding: 20px;
-  }
-  
-  /*Adicionando efeito ao passar o cursor por cima dos links*/
-  .menu-nav ul li a:hover {
-    color: #f85f73;
-  }
-  
-  /*Estilizando a seção inicial do site*/
   #inicio {
     background-color: #f85f73;
     width: 100vw;
     height: 80vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     overflow-x: hidden;
   }
-  
-  /*Estilizando separadamente as partes da frase de efeito para manter a formatação desejada*/
+
   .frase {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     letter-spacing: 2px;
-    margin-left: 300px;
+    margin-left: 20px;
   }
-  
+
   #inicio h1 {
     color: #fff;
-    font-size: 4.5rem;
+    font-size: 1.5rem;
     font-weight: 500;
   }
-  
+
   #inicio h2 {
     color: #fff;
-    font-size: 4.5rem;
+    font-size: 1.5rem;
   }
-  
+
   .frase-continua {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
   }
-  
+
   .frase-continua p {
     color: #fff;
-    font-size: 4.5rem;
+    font-size: 1.5rem;
   }
-  
+
   .frase-continua a {
     color: #fbe8d3;
-    font-size: 5rem;
+    font-size: 2rem;
     margin-right: 70px;
     font-weight: bold;
   }
-  
-  /*Efeito no cursor  na palavra de impacto*/
+
   .frase-continua a:hover {
     color: #283c63;
   }
-  
-  /*Ajustando a Posição da imagem da pagina inicial*/
-  .img-inicio {
-    margin-right: 120px;
-  }
-  /*Estilizando a Area de produtos que engloba os cards*/
+
   #produtos {
-      background-color: #f5f5f5;
-      width: 100vw;
-      overflow-x: hidden;
-      padding-bottom: 30px;
+    background-color: #f5f5f5;
+    width: 100vw;
+    overflow-x: hidden;
+    padding-bottom: 20px;
   }
-  /*Padronizando os Titulos de seção*/
-  .titulo-secao{
+
+  .titulo-secao {
     text-align: center;
-    font-size: 4rem;
+    font-size: 1.8rem;
     font-weight: bold;
     align-items: center;
     color: #283c63;
-    padding-top: 20px;
+    padding-top: 15px;
   }
-  /*Versão Branca do titulo de seção*/
-  .titulo-secao-branco{
+  .titulo-secao-branco {
     text-align: center;
-    font-size: 4rem;
+    font-size: 1.8rem;
     font-weight: bold;
     align-items: center;
     color: #fff;
-    padding-top: 20px;
+    padding-top: 15px;
   }
-  /*Estrutura que comporta os cards de produtos em colunas*/
+
   .cards-column {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
   }
-  
-  /*Estrutura para organizar os cards em linha*/
+
   .cards {
-      display: flex;
-      justify-content: space-around;
-      flex-direction: row;
-      padding-top: 60px;
-      overflow-x: hidden;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-top: 60px;
+    overflow-x: hidden;
   }
-
-  /*Estilizando o card*/
   .card-container {
-      display: flex;
-      height: 230px;
-      width: 200px;
-      flex-direction: column;
-      background-color: #fbe8d3;
-      border-radius: 10px;
-  }
-  /*Ajustando o posicionamento da imagem para o card*/
-  .img-card {
-      height: 200px;
-      width: 200px;
-      border-radius: 10px;
-  }
-/*Descrição do Card*/
-  .card-title {
-      font-size: 1.4rem;
-      color: #283c63;
-      text-align: center;
+    display: flex;
+    height: 100px;
+    width: 80px;
+    flex-direction: column;
+    background-color: #fbe8d3;
+    border-radius: 10px;
   }
 
-/*Estilizando Seção de preços*/
+  .img-card {
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    font-size: 0.6rem;
+    color: #283c63;
+    text-align: center;
+  }
+
   .precos {
     display: flex;
     justify-content: center;
     flex-direction: column;
     background-color: #fff;
     height: 40vh;
-}
-/*Estilizando a div para ajustar o posicionamento da tabela*/
+  }
+
   .tabela {
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
+  }
+  table {
+    margin-top: 40px;
   }
 
-  /*Estilizando a Tabela*/
-  table {
-    margin-top: 60px;
-  }
-  
   table .primeira-linha-table {
-    background-color: #FBE8D3;
+    background-color: #fbe8d3;
   }
-  
+
   table .primeira-linha-table th {
-    font-size: 4rem;
+    font-size: 2rem;
     color: #283c63;
     font-weight: 600;
   }
-  
+
   table .linha-table td {
-    font-size: 2rem;
+    font-size: 1rem;
     color: #283c63;
     font-weight: 400;
   }
-  
+
   table .segunda-linha-table {
     background-color: #fff;
   }
-  
+
   table .terceira-linha-table {
     background-color: #fff;
   }
-  
+
   table .quarta-linha-table {
     background-color: #fff;
   }
-  
+
   .sabor-table {
-    background-color: #928A97;
+    background-color: #928a97;
   }
-  /*Estilizando seção de simulação de compras*/
+
   #compras {
-      background-color: #283c63;
-      height: 30vh;
+    background-color: #283c63;
+    height: 30vh;
   }
 
   #compras p {
-      color: #fff;
+    color: #fff;
   }
-  /*Estilizando seção que integra o Js para apresentar supostos pedidos*/
+
   .escolhas {
-      background-color: #f85f73;
-      height: 200px;
-      border-radius: 20px;
-
+    background-color: #f85f73;
+    height: 200px;
+    border-radius: 20px;
   }
 
-  /*Personalização do Botão*/
   button {
-      background-color: #fbe8d3;
-      color: #f85f73;
+    background-color: #fbe8d3;
+    color: #f85f73;
   }
-  /*Estilizando seção de explicação do Trabalho*/
+
   #explica {
-      background-color: #f5f5f5;
-      height: 15vw;   
+    background-color: #f5f5f5;
   }
 
   #explica .texto-explica {
-      text-align: center;
-      font-weight: 400;
-      font-size: 2.5rem;
-      padding-top: 40px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
   }
 
-
-/*Abaixo estão todas as edições anteriores adaptadas para obter melhor responsividade*/
-
-
-  @media (max-width: 999px) {
-    body{
-        overflow-x: hidden;
-    }  
-    header nav ul li{
-          display: none;
-    }
-
-    .logo {
-      font-size: 2rem;
-      color: #283c63;
-      font-weight: bold;
-      margin-left: 60px;
-    }
-
-    #inicio img{
-        height: 40%;
-        width: 60%;
-    }
-    #inicio {
-        background-color: #f85f73;
-        width: 100vw;
-        height: 80vh;
-        display: flex;
-        justify-content: space-between;
-        overflow-x: hidden;
-      }
-      
-
-    .frase {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        letter-spacing: 2px;
-        margin-left: 20px;
-      }
-      
-      #inicio h1 {
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: 500;
-      }
-      
-      #inicio h2 {
-        color: #fff;
-        font-size: 1.5rem;
-      }
-      
-      .frase-continua {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-      }
-      
-      .frase-continua p {
-        color: #fff;
-        font-size: 1.5rem;
-      }
-      
-      .frase-continua a {
-        color: #fbe8d3;
-        font-size: 2rem;
-        margin-right: 70px;
-        font-weight: bold;
-      }
-      
-      .frase-continua a:hover {
-        color: #283c63;
-      }
-
-      #produtos {
-        background-color: #f5f5f5;
-        width: 100vw;
-        overflow-x: hidden;
-        padding-bottom: 20px;
-    }
-
-
-    .titulo-secao{
-        text-align: center;
-        font-size: 1.8rem;
-        font-weight: bold;
-        align-items: center;
-        color: #283c63;
-        padding-top: 15px;
-      }
-      .titulo-secao-branco{
-        text-align: center;
-        font-size: 1.8rem;
-        font-weight: bold;
-        align-items: center;
-        color: #fff;
-        padding-top: 15px;
-      }
-      
-      .cards-column {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-      }
-    
-      .cards {
-          display: flex;
-          justify-content: space-around;
-          flex-direction: row;
-          padding-top: 60px;
-          overflow-x: hidden;
-      }
-      .card-container {
-          display: flex;
-          height: 100px;
-          width: 80px;
-          flex-direction: column;
-          background-color: #fbe8d3;
-          border-radius: 10px;
-      }
-    
-      .img-card {
-          height: 80px;
-          width: 80px;
-          border-radius: 10px;
-      }
-    
-      .card-title {
-          font-size: 0.6rem;
-          color: #283c63;
-          text-align: center;
-      }
-    
-    
-      .precos {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        background-color: #fff;
-        height: 40vh;
-    }
-
-    .tabela {
-        display: flex;
-        justify-content: center;
-        overflow-x: hidden;
-      }
-      table {
-        margin-top: 40px;
-      }
-      
-      table .primeira-linha-table {
-        background-color: #FBE8D3;
-      }
-      
-      table .primeira-linha-table th {
-        font-size: 2rem;
-        color: #283c63;
-        font-weight: 600;
-      }
-      
-      table .linha-table td {
-        font-size: 1rem;
-        color: #283c63;
-        font-weight: 400;
-      }
-      
-      table .segunda-linha-table {
-        background-color: #fff;
-      }
-      
-      table .terceira-linha-table {
-        background-color: #fff;
-      }
-      
-      table .quarta-linha-table {
-        background-color: #fff;
-      }
-      
-      .sabor-table {
-        background-color: #928A97;
-      }
-      
-      #compras {
-          background-color: #283c63;
-          height: 30vh;
-      }
-    
-      #compras p {
-          color: #fff;
-      }
-    
-      .escolhas {
-          background-color: #f85f73;
-          height: 200px;
-          border-radius: 20px;
-    
-      }
-    
-    
-      button {
-          background-color: #fbe8d3;
-          color: #f85f73;
-      }
-    
-      #explica {
-          background-color: #f5f5f5;
-      }
-    
-      #explica .texto-explica {
-          text-align: center;
-          font-weight: 400;
-          font-size: 1.5rem;
-          padding-top: 30px;
-          background-color: #f5f5f5;
-      }
-    
-
-
-    
-
+  #edtTipo {
+    font-size: 0.7rem;
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
+
+  #edtSabor {
+    font-size: 0.7rem;
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  label {
+    font-size: 0.6rem;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  button {
+    background-color: #fbe8d3;
+    color: #f85f73;
+    border: none;
+    width: 60px;
+    border-radius: 30px;
+    font-size: 1rem;
+  }
+
+  #ent {
+    display: flex;
+    justify-content: center;
+  }
+  #areaResp {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  #areaResp p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
