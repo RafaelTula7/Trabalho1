@@ -185,6 +185,7 @@ header .menu-nav {
   flex-direction: column;
   background-color: #fff;
   height: 40vh;
+  padding-bottom: 90px;
 }
 /*Estilizando a div para ajustar o posicionamento da tabela*/
 .tabela {
@@ -429,6 +430,7 @@ label {
     flex-direction: column;
     background-color: #fff;
     height: 40vh;
+    padding-bottom: 20px;
   }
 
   .tabela {
